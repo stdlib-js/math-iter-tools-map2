@@ -34,14 +34,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-iter-tools-map2
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@esm/index.mjs';
+var iterMap2 = require( '@stdlib/math-iter-tools-map2' );
 ```
 
 #### iterMap2( iter0, iter1, fcn\[, options] )
@@ -49,8 +65,8 @@ import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2
 Returns an [iterator][mdn-iterator-protocol] which invokes a binary `function` accepting numeric arguments for each iterated value.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
+var copysign = require( '@stdlib/math-base-special-copysign' );
 
 var it1 = array2iterator( [ 1.0, 2.0, 3.0, 4.0 ] );
 var it2 = array2iterator( [ 1.0, -1.0, -1.0, 1.0 ] );
@@ -81,7 +97,7 @@ The invoked `function` is provided two arguments:
 -   `y`: iterated value from second input [iterator][mdn-iterator-protocol].
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 function fcn( x, y ) {
     return x + y + 10;
@@ -112,8 +128,8 @@ The function supports the following `options`:
 By default, the function returns an [iterator][mdn-iterator-protocol] which returns `NaN` when an input [iterator][mdn-iterator-protocol] yields a non-numeric value. To specify a different return value, set the `invalid` option.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
+var copysign = require( '@stdlib/math-base-special-copysign' );
 
 var it1 = array2iterator( [ '1.0', '2.0', '3.0' ] );
 var it2 = array2iterator( [ 1.0, 2.0, 3.0 ] );
@@ -136,8 +152,8 @@ v = it.next().value;
 If provided a numeric value as an [`iterator`][mdn-iterator-protocol] argument, the value is broadcast as an **infinite** [iterator][mdn-iterator-protocol] which **always** returns the provided value.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
+var copysign = require( '@stdlib/math-base-special-copysign' );
 
 var it1 = array2iterator( [ 1.0, 2.0 ] );
 
@@ -180,16 +196,11 @@ var bool = it.next().done;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@esm/index.mjs';
-import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@esm/index.mjs';
-import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-iter-randu' );
+var uniform = require( '@stdlib/random-iter-uniform' );
+var copysign = require( '@stdlib/math-base-special-copysign' );
+var iterMap2 = require( '@stdlib/math-iter-tools-map2' );
 
 // Create seeded iterators for generating pseudorandom numbers:
 var rand1 = randu({
@@ -214,10 +225,6 @@ while ( true ) {
     }
     console.log( r.value );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -249,7 +256,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -266,7 +273,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
