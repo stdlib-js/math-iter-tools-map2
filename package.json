@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-iter-tools-map2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create an iterator which invokes a binary function accepting numeric arguments for each iterated value.",
   "license": "Apache-2.0",
   "author": {
@@ -43,7 +43,7 @@
     "@stdlib/assert-is-number": "^0.1.1",
     "@stdlib/assert-is-plain-object": "^0.1.1",
     "@stdlib/string-format": "^0.1.1",
-    "@stdlib/symbol-iterator": "^0.1.0",
+    "@stdlib/symbol-iterator": "^0.1.1",
     "@stdlib/types": "^0.1.0",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.1"
   },
