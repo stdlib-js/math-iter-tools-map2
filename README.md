@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@deno/mod.js';
+import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@v0.2.3-deno/mod.js';
 ```
 
 #### iterMap2( iter0, iter1, fcn\[, options] )
@@ -195,7 +195,7 @@ var bool = it.next().done;
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@deno/mod.js';
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-uniform@deno/mod.js';
 import copysign from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-copysign@deno/mod.js';
-import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@deno/mod.js';
+import iterMap2 from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-iter-tools-map2@v0.2.3-deno/mod.js';
 
 // Create seeded iterators for generating pseudorandom numbers:
 var rand1 = randu({
